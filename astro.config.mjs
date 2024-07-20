@@ -8,28 +8,20 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import simpleStackForm from "simple-stack-form";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-nomy.vercel.app",
-  integrations: [
-    mdx({
-      syntaxHighlight: "shiki",
-      shikiConfig: {
-        theme: "github-dark-dimmed",
-      },
-      gfm: true,
-    }),
-    icon(),
-    sitemap(),
-    react(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    db(),
-    simpleStackForm(),
-  ],
+  integrations: [mdx({
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "github-dark-dimmed"
+    },
+    gfm: true
+  }), icon(), sitemap(), react(), tailwind({
+    applyBaseStyles: false
+  }), db(), simpleStackForm()],
   output: "hybrid",
-  adapter: vercel({
-    analytics: true,
-  }),
+  adapter: cloudflare()
 });
