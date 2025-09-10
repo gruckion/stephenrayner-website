@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,82 +6,116 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --background-200: 0 0% 98%;
-
-    --foreground: 0 0% 9%;
-
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 40%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 9%;
-
-    --accent: 0, 0%, 0%, 0.06;
-    --accent-foreground: 0 0% 9%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-    --ds-shadow-border: 0 0 0 1px rgba(0, 0, 0, .08);
+    --background: 0 0% 99.2157%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 99.2157%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 98.8235%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 257.9412 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214.2857 24.1379% 94.3137%;
+    --secondary-foreground: 0 0% 3.1373%;
+    --muted: 0 0% 96.0784%;
+    --muted-foreground: 0 0% 32.1569%;
+    --accent: 221.3793 100% 94.3137%;
+    --accent-foreground: 216.3158 76% 49.0196%;
+    --destructive: 358.4416 74.7573% 59.6078%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 17.0732% 91.9608%;
+    --input: 0 0% 92.1569%;
+    --ring: 0 0% 0%;
+    --chart-1: 148.0952 53.3898% 53.7255%;
+    --chart-2: 257.9412 100% 60%;
+    --chart-3: 24.8571 98.1308% 58.0392%;
+    --chart-4: 217.0787 76.7241% 54.5098%;
+    --chart-5: 0 0% 45.4902%;
+    --sidebar: 210 42.8571% 97.2549%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 92.1569%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 92.1569%;
+    --sidebar-ring: 0 0% 0%;
+    --font-sans: Plus Jakarta Sans, sans-serif;
+    --font-serif: Lora, serif;
+    --font-mono: IBM Plex Mono, monospace;
+    --radius: 1.4rem;
+    --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 1px 2px -1px hsl(0 0% 0% / 0.16);
+    --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 1px 2px -1px hsl(0 0% 0% / 0.16);
+    --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 2px 4px -1px hsl(0 0% 0% / 0.16);
+    --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 4px 6px -1px hsl(0 0% 0% / 0.16);
+    --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 8px 10px -1px hsl(0 0% 0% / 0.16);
+    --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.4);
+    --tracking-normal: -0.025em;
+    --spacing: 0.27rem;
   }
 
   .dark {
-    --background: 0 0% 4%;
-    --background-200: 0 170% 0%;
-
-    --foreground: 0 0% 93%;
-
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 80%;
-
-    --accent: 0, 0%, 100%, .09;
-    --accent-foreground: 0 0% 93%;
-
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 93%;
-
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
-
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 93%;
-
-    --primary: 0 0% 93%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 93%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 93%;
-
-    --ring: 0 0% 12%;
-
-    --radius: 0.5rem;
-    --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145);
+    --background: 225 7.1429% 10.9804%;
+    --foreground: 0 0% 94.1176%;
+    --card: 228 6.8493% 14.3137%;
+    --card-foreground: 0 0% 94.1176%;
+    --popover: 228 6.8493% 14.3137%;
+    --popover-foreground: 0 0% 94.1176%;
+    --primary: 257.6687 100% 68.0392%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226.6667 9.6774% 18.2353%;
+    --secondary-foreground: 0 0% 94.1176%;
+    --muted: 226.6667 9.6774% 18.2353%;
+    --muted-foreground: 0 0% 62.7451%;
+    --accent: 217.2414 32.5843% 17.451%;
+    --accent-foreground: 208.209 100% 73.7255%;
+    --destructive: 0 90.604% 70.7843%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222.8571 6.422% 21.3725%;
+    --input: 222.8571 6.422% 21.3725%;
+    --ring: 257.6687 100% 68.0392%;
+    --chart-1: 141.8919 69.1589% 58.0392%;
+    --chart-2: 257.6687 100% 68.0392%;
+    --chart-3: 0 93.5484% 81.7647%;
+    --chart-4: 217.5484 87.5706% 65.2941%;
+    --chart-5: 0 0% 62.7451%;
+    --sidebar: 240 4.3478% 9.0196%;
+    --sidebar-foreground: 0 0% 94.1176%;
+    --sidebar-primary: 257.6687 100% 68.0392%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 226.6667 9.6774% 18.2353%;
+    --sidebar-accent-foreground: 257.6687 100% 68.0392%;
+    --sidebar-border: 222.8571 6.422% 21.3725%;
+    --sidebar-ring: 257.6687 100% 68.0392%;
+    --font-sans: Plus Jakarta Sans, sans-serif;
+    --font-serif: Lora, serif;
+    --font-mono: IBM Plex Mono, monospace;
+    --radius: 1.4rem;
+    --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 1px 2px -1px hsl(0 0% 0% / 0.16);
+    --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 1px 2px -1px hsl(0 0% 0% / 0.16);
+    --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 2px 4px -1px hsl(0 0% 0% / 0.16);
+    --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 4px 6px -1px hsl(0 0% 0% / 0.16);
+    --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16),
+      0px 8px 10px -1px hsl(0 0% 0% / 0.16);
+    --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.4);
   }
 }
 
 @layer base {
   @font-face {
-    font-family: 'CalSans Semibold';
-    src: url('/fonts/calsans-semibold.woff2') format('woff2');
+    font-family: "CalSans Semibold";
+    src: url("/fonts/calsans-semibold.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -123,9 +157,10 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: var(--tracking-normal);
   }
 
-  .callout>* {
+  .callout > * {
     @apply my-0 !important;
   }
 
@@ -134,7 +169,7 @@
   }
 
   /* MdxComponent: For <code></code> with no parent <pre></pre> */
-  :not(pre)>code {
+  :not(pre) > code {
     @apply relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm bg-background text-foreground;
   }
 }
@@ -149,12 +184,12 @@
 
 /* Vercel card style */
 .card_border {
-  box-shadow: var(--ds-shadow-border), 0 4px 6px rgba(0, 0, 0, .04);
-  transition: box-shadow .15s ease;
+  box-shadow: var(--ds-shadow-border), 0 4px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.15s ease;
 }
 
 .card_border:hover {
-  box-shadow: var(--ds-shadow-border), 0 6px 14px rgba(0, 0, 0, .08);
+  box-shadow: var(--ds-shadow-border), 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .dark .card_border:hover {
@@ -169,5 +204,5 @@
 }
 
 [data-radix-scroll-area-viewport]::-webkit-scrollbar {
-  display: none
+  display: none;
 }
