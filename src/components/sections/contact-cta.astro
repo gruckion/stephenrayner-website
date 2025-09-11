@@ -1,0 +1,79 @@
+---
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+import { siteConfig } from "@/config/site";
+---
+
+<section id="contact" class="py-16 sm:py-20">
+  <div class="container max-w-4xl">
+    <div class="rounded-2xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 sm:p-12 text-center">
+      <h2 class="font-heading text-3xl font-bold sm:text-4xl">
+        Let's Work Together
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+        I'm always interested in hearing about new opportunities and exciting projects.
+      </p>
+      
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="mailto:stephen@stephenrayner.com"
+          class={cn(buttonVariants({ size: "lg", rounded: "full" }), "gap-2")}
+        >
+          <Icon name="lucide:mail" class="size-4" />
+          <span>Get in Touch</span>
+        </a>
+        <a
+          href="/newsletter"
+          class={cn(
+            buttonVariants({
+              variant: "outline",
+              size: "lg",
+              rounded: "full",
+            }),
+            "gap-2"
+          )}
+        >
+          <Icon name="lucide:newspaper" class="size-4" />
+          <span>Subscribe to Newsletter</span>
+        </a>
+      </div>
+      
+      <div class="mt-8 flex justify-center items-center gap-6">
+        <a
+          href={siteConfig.links.github}
+          target="_blank"
+          rel="noreferrer"
+          class="text-muted-foreground hover:text-foreground transition-colors"
+          aria-label="GitHub"
+        >
+          <Icon name="github" class="size-6" />
+        </a>
+        <a
+          href={siteConfig.links.linkedin}
+          target="_blank"
+          rel="noreferrer"
+          class="text-muted-foreground hover:text-foreground transition-colors"
+          aria-label="LinkedIn"
+        >
+          <Icon name="lucide:linkedin" class="size-6" />
+        </a>
+        <a
+          href={siteConfig.links.twitter}
+          target="_blank"
+          rel="noreferrer"
+          class="text-muted-foreground hover:text-foreground transition-colors"
+          aria-label="Twitter"
+        >
+          <Icon name="lucide:twitter" class="size-6" />
+        </a>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-border">
+        <p class="text-sm text-muted-foreground">
+          Currently <span class="font-semibold text-green-600 dark:text-green-400">available</span> for freelance projects and consulting
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+---
+import { aboutMe } from "@/config/portfolio";
+import { Icon } from "astro-icon/components";
+---
+
+<section id="about" class="py-16 sm:py-20">
+  <div class="container max-w-7xl">
+    <div class="mx-auto grid gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+      <div>
+        <h2 class="font-heading text-3xl text-foreground md:text-4xl lg:text-[40px]">
+          {aboutMe.title}
+        </h2>
+        <p class="mt-4 text-lg font-medium text-foreground">
+          {aboutMe.description}
+        </p>
+        <div class="mt-6 space-y-4 text-muted-foreground">
+          {aboutMe.content.split('\n').map((paragraph) => (
+            <p class="leading-relaxed">{paragraph.trim()}</p>
+          ))}
+        </div>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/about"
+            class="inline-flex items-center gap-2 text-primary hover:underline"
+          >
+            <span>Learn more about me</span>
+            <Icon name="lucide:arrow-right" class="size-4" />
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        {aboutMe.highlights.map((highlight) => (
+          <div class="rounded-lg border bg-card p-6 text-center">
+            <div class="text-3xl font-bold text-primary">
+              {highlight.value}
+            </div>
+            <div class="mt-2 text-sm text-muted-foreground">
+              {highlight.label}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

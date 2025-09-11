@@ -1,21 +1,21 @@
 ---
-import BentoGrid from "@/components/sections/bentogrid.astro";
-import Features from "@/components/sections/features.astro";
 import HeroLanding from "@/components/sections/hero-landing.astro";
-import InfoLanding from "@/components/sections/info-landing.astro";
-import PreviewLanding from "@/components/sections/preview-landing.astro";
-import Testimonials from "@/components/sections/testimonials.astro";
+import AboutSection from "@/components/sections/about-section.astro";
+import ProjectsShowcase from "@/components/sections/projects-showcase.astro";
+import ExperienceTimeline from "@/components/sections/experience-timeline.astro";
+import SkillsSection from "@/components/sections/skills-section.astro";
+import BlogPreview from "@/components/sections/blog-preview.astro";
+import ContactCta from "@/components/sections/contact-cta.astro";
 
-import { infos } from "@/config/landing";
 import MainLayout from "@/layouts/main-layout.astro";
 ---
 
-<MainLayout title="Landing">
+<MainLayout title="Stephen Rayner - Full-Stack Developer">
   <HeroLanding />
-  <PreviewLanding />
-  <BentoGrid />
-  <InfoLanding data={infos[0]} reverse={true} />
-  <!-- <InfoLanding data={infos[1]} /> -->
-  <Features />
-  <Testimonials />
+  <AboutSection />
+  <ProjectsShowcase />
+  <ExperienceTimeline />
+  <SkillsSection />
+  <BlogPreview />
+  <ContactCta />
 </MainLayout>
