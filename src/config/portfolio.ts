@@ -14,6 +14,7 @@ export interface Experience {
   duration: string;
   description: string;
   achievements: string[];
+  siteUrl?: string;
 }
 
 export interface Skill {
@@ -58,7 +59,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    company: "Watt",
+    company: "Watt.co.uk",
     position: "Chief Technology Officer",
     duration: "2021 - Present",
     description: "Leading development teams, ensuring efficient delivery, code quality, and secure cloud infrastructure.",
@@ -68,6 +69,7 @@ export const experiences: Experience[] = [
       "Implemented AI-powered call recording, transcription, and analysis with OpenAI",
       "Created compliance workflow with Experian credit checks and automated submissions",
     ],
+    siteUrl: "https://watt.co.uk",
   },
   {
     company: "Vitaccess",
@@ -80,6 +82,7 @@ export const experiences: Experience[] = [
       "Designed secure Data Lakehouse for patient data ensuring compliance",
       "Architected localization API with Wordbee and GraphQL",
     ],
+    siteUrl: "https://www.vitaccess.com",
   },
   {
     company: "AFerry",
@@ -91,6 +94,7 @@ export const experiences: Experience[] = [
       "Implemented RESTful APIs and microservices architecture",
       "Collaborated with cross-functional teams in agile environment",
     ],
+    siteUrl: "https://www.aferry.com",
   },
   {
     company: "New Orbit",
@@ -102,6 +106,7 @@ export const experiences: Experience[] = [
       "Worked with modern JavaScript frameworks and cloud services",
       "Participated in code reviews and technical documentation",
     ],
+    siteUrl: "https://neworbit.co.uk",
   },
 ];
 
@@ -159,6 +164,6 @@ export const aboutMe = {
     { label: "Years of Experience", value: "14+" },
     { label: "Years as CTO/Lead", value: "7+" },
     { label: "Technologies", value: "30+" },
-    { label: "Cloud Platforms", value: "AWS, Azure, GCP" },
+    { label: "Cloud Platforms", value: "AWS, Vercel, Cloudflare" },
   ],
 };

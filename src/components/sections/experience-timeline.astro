@@ -24,7 +24,19 @@ import ExperienceSummary from "./experience-summary.astro";
                   <h3 class="font-heading text-xl font-semibold">
                     {exp.position}
                   </h3>
-                  <p class="text-muted-foreground">{exp.company}</p>
+                  {exp.siteUrl ? (
+                    <a
+                      href={exp.siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+                    >
+                      {exp.company}
+                      <Icon name="lucide:external-link" class="size-3" />
+                    </a>
+                  ) : (
+                    <p class="text-muted-foreground">{exp.company}</p>
+                  )}
                 </div>
                 <span class="text-sm text-muted-foreground">
                   {exp.duration}
