@@ -4,9 +4,11 @@ import { Icon } from "astro-icon/components";
 import HeaderSection from "./header-section.astro";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { BlogEmptyState } from "@/components/blog-empty-state";
 
 const posts = await getCollection("blog");
-const latestPosts = posts
+const visiblePosts = posts.filter((post) => post.data.published);
+const latestPosts = visiblePosts
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 3);
 
@@ -27,30 +29,36 @@ function formatDate(date: Date) {
       subtitle="Thoughts on development, technology, and career growth"
     />
     
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {latestPosts.map((post) => (
-        <article class="group relative overflow-hidden rounded-lg border bg-card transition-all hover:shadow-lg">
-          <a href={`/blog/${post.slug}`} class="block p-6">
-            <div class="flex items-center gap-2 text-xs text-muted-foreground">
-              <Icon name="lucide:calendar" class="size-3" />
-              <time datetime={post.data.pubDate.toISOString()}>
-                {formatDate(post.data.pubDate)}
-              </time>
-            </div>
-            <h3 class="mt-3 font-heading text-lg font-semibold group-hover:text-primary transition-colors">
-              {post.data.title}
-            </h3>
-            <p class="mt-2 text-sm text-muted-foreground line-clamp-3">
-              {post.data.description}
-            </p>
-            <div class="mt-4 inline-flex items-center gap-1 text-sm text-primary">
-              <span>Read more</span>
-              <Icon name="lucide:arrow-right" class="size-3 transition-transform group-hover:translate-x-1" />
-            </div>
-          </a>
-        </article>
-      ))}
-    </div>
+    {latestPosts.length > 0 ? (
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {latestPosts.map((post) => (
+          <article class="group relative overflow-hidden rounded-lg border bg-card transition-all hover:shadow-lg">
+            <a href={`/blog/${post.slug}`} class="block p-6">
+              <div class="flex items-center gap-2 text-xs text-muted-foreground">
+                <Icon name="lucide:calendar" class="size-3" />
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {formatDate(post.data.pubDate)}
+                </time>
+              </div>
+              <h3 class="mt-3 font-heading text-lg font-semibold group-hover:text-primary transition-colors">
+                {post.data.title}
+              </h3>
+              <p class="mt-2 text-sm text-muted-foreground line-clamp-3">
+                {post.data.description}
+              </p>
+              <div class="mt-4 inline-flex items-center gap-1 text-sm text-primary">
+                <span>Read more</span>
+                <Icon name="lucide:arrow-right" class="size-3 transition-transform group-hover:translate-x-1" />
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="mt-12">
+        <BlogEmptyState client:load delay={0.2} />
+      </div>
+    )}
     
     <div class="mt-10 text-center">
       <a
