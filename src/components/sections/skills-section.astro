@@ -1,0 +1,40 @@
+---
+import { skills } from "@/config/portfolio";
+import HeaderSection from "./header-section.astro";
+---
+
+<section id="skills" class="py-16 sm:py-20">
+  <div class="container max-w-6xl">
+    <HeaderSection
+      label="Expertise"
+      title="Skills & Technologies"
+      subtitle="Technologies I work with on a daily basis"
+    />
+    
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {skills.map((category) => (
+        <div class="space-y-4">
+          <h3 class="font-heading text-lg font-semibold">
+            {category.category}
+          </h3>
+          <div class="space-y-3">
+            {category.items.map((skill) => (
+              <div class="flex items-center justify-between">
+                <span class="text-sm">{skill.name}</span>
+                <span class={`text-xs px-2 py-1 rounded-full ${
+                  skill.level === "Expert" 
+                    ? "bg-primary/10 text-primary" 
+                    : skill.level === "Advanced"
+                    ? "bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                    : "bg-muted text-muted-foreground"
+                }`}>
+                  {skill.level}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

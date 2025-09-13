@@ -1,0 +1,73 @@
+---
+import { projects } from "@/config/portfolio";
+import { Icon } from "astro-icon/components";
+import HeaderSection from "./header-section.astro";
+---
+
+<section id="projects" class="py-16 sm:py-20">
+  <div class="container max-w-7xl">
+    <HeaderSection
+      label="Portfolio"
+      title="Featured Projects"
+      subtitle="A selection of my recent work and personal projects"
+    />
+    
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      {projects.filter(p => p.featured).map((project) => (
+        <div class="group relative overflow-hidden rounded-xl border bg-card transition-all hover:shadow-lg">
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-semibold">
+              {project.title}
+            </h3>
+            <p class="mt-3 text-muted-foreground">
+              {project.description}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span class="inline-flex items-center rounded-md bg-muted px-2.5 py-0.5 text-xs font-medium">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div class="mt-6 flex items-center gap-4">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Icon name="github" class="size-4" />
+                  <span>Code</span>
+                </a>
+              )}
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Icon name="lucide:external-link" class="size-4" />
+                  <span>Live Demo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-10 text-center">
+      <a
+        href="https://github.com/gruckion"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-primary hover:underline"
+      >
+        <span>View all projects on GitHub</span>
+        <Icon name="lucide:arrow-right" class="size-4" />
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,43 +1,34 @@
 import type { SidebarNavItem, SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Astronomy",
+  name: "Stephen Rayner",
   description:
-    "An modern example app built using Astro v4 & shadcn/ui. Inspired by shadcn/taxonomy.",
-  url: "https://astro-nomy.vercel.app",
-  ogImage: "https://astro-nomy.vercel.app/og.jpg",
+    "Personal website of Stephen Rayner - sharing thoughts on technology, development, and career insights.",
+  url: "https://stephenrayner.com",
+  ogImage: "https://stephenrayner.com/og.jpg",
   links: {
-    twitter: "https://twitter.com/miickasmt",
-    github: "https://github.com/mickasmt/astro-nomy",
+    twitter: "https://x.com/stephen_rayner",
+    github: "https://github.com/gruckion",
+    linkedin: "https://www.linkedin.com/in/stephen-r-rayner",
   },
 };
 
 export const footerLinks: SidebarNavItem[] = [
   {
-    title: "Company",
+    title: "Quick Links",
     items: [
-      { title: "About", href: "#" },
-      { title: "Enterprise", href: "#" },
-      { title: "Partners", href: "#" },
-      { title: "Jobs", href: "#" },
+      { title: "Home", href: "/" },
+      { title: "About", href: "/about" },
+      { title: "Blog", href: "/blog" },
+      { title: "Newsletter", href: "/newsletter" },
     ],
   },
   {
-    title: "Product",
+    title: "Connect",
     items: [
-      { title: "Security", href: "#" },
-      { title: "Customization", href: "#" },
-      { title: "Customers", href: "#" },
-      { title: "Changelog", href: "#" },
-    ],
-  },
-  {
-    title: "Docs",
-    items: [
-      { title: "Introduction", href: "#" },
-      { title: "Installation", href: "#" },
-      { title: "Components", href: "#" },
-      { title: "Code Blocks", href: "#" },
+      { title: "GitHub", href: "https://github.com/gruckion", external: true },
+      { title: "X (Twitter)", href: "https://x.com/stephen_rayner", external: true },
+      { title: "LinkedIn", href: "https://www.linkedin.com/in/stephen-r-rayner", external: true },
     ],
   },
 ];

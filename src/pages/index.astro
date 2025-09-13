@@ -1,23 +1,21 @@
 ---
-import ExampleGrid from "@/components/example-grid.astro";
-import PageHeader from "@/components/page-header.astro";
-import { navMenuConfig } from "@/config/nav-menu";
-import MainLayout from "@/layouts/main-layout.astro";
+import HeroLanding from "@/components/sections/hero-landing.astro";
+import AboutSection from "@/components/sections/about-section.astro";
+import ProjectsShowcase from "@/components/sections/projects-showcase.astro";
+import ExperienceTimeline from "@/components/sections/experience-timeline.astro";
+import SkillsSection from "@/components/sections/skills-section.astro";
+import BlogPreview from "@/components/sections/blog-preview.astro";
+import ContactCta from "@/components/sections/contact-cta.astro";
 
-const examples = navMenuConfig.examplesNav[0].items;
-const pages = navMenuConfig.pagesNav[0].items;
+import MainLayout from "@/layouts/main-layout.astro";
 ---
 
-<MainLayout title="">
-  <div class="bg-background-200">
-    <section class="container py-12">
-      <PageHeader
-        heading="Discovery"
-        text="Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Fully Open Source."
-      />
-
-      <ExampleGrid title="Pages" items={pages} />
-      <ExampleGrid title="Examples Apps" items={examples} />
-    </section>
-  </div>
+<MainLayout title="Stephen Rayner - Full-Stack Developer">
+  <HeroLanding />
+  <AboutSection />
+  <ProjectsShowcase />
+  <ExperienceTimeline />
+  <SkillsSection />
+  <BlogPreview />
+  <ContactCta />
 </MainLayout>
