@@ -7,17 +7,22 @@ import { siteConfig } from "@/config/site";
 
 <section id="contact" class="py-16 sm:py-20">
   <div class="container max-w-4xl">
-    <div class="rounded-2xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 sm:p-12 text-center">
+    <div
+      class="rounded-2xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 sm:p-12 text-center"
+    >
       <h2 class="font-heading text-3xl font-bold sm:text-4xl">
         Let's Work Together
       </h2>
       <p class="mt-4 text-lg text-muted-foreground">
-        I'm always interested in hearing about new opportunities and exciting projects.
+        I'm always interested in hearing about new opportunities and exciting
+        projects.
       </p>
-      
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+      <div
+        class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+      >
         <a
-          href="mailto:stephen@stephenrayner.com"
+          href="mailto:contact@gruckion.com"
           class={cn(buttonVariants({ size: "lg", rounded: "full" }), "gap-2")}
         >
           <Icon name="lucide:mail" class="size-4" />
@@ -38,7 +43,7 @@ import { siteConfig } from "@/config/site";
           <span>Subscribe to Newsletter</span>
         </a>
       </div>
-      
+
       <div class="mt-8 flex justify-center items-center gap-6">
         <a
           href={siteConfig.links.github}
@@ -68,10 +73,13 @@ import { siteConfig } from "@/config/site";
           <Icon name="lucide:twitter" class="size-6" />
         </a>
       </div>
-      
+
       <div class="mt-8 pt-8 border-t border-border">
         <p class="text-sm text-muted-foreground">
-          Currently <span class="font-semibold text-green-600 dark:text-green-400">available</span> for freelance projects and consulting
+          Currently <span
+            class="font-semibold text-green-600 dark:text-green-400"
+            >available</span
+          > for freelance projects and consulting
         </p>
       </div>
     </div>

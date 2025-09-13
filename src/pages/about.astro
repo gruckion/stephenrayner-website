@@ -6,37 +6,202 @@ import { Button } from "@/components/ui/button";
 import { Icon } from "astro-icon/components";
 ---
 
+<style>
+  .stephen-img {
+    clip-path: ellipse(50% 35% at center 45%);
+  }
+</style>
+
 <MainLayout title="About" description="Lorem ipsum dolor sit amet">
   <section class="space-y-5">
-    <section
-      class="relative container max-w-screen-md mb-28 mt-16 sm:mt-20 lg:mt-28"
-    >
-      <div class="flex h-full flex-col justify-between">
-        <div class="grid gap-8 sm:grid-cols-2">
-          <div>
-            <h1 class="text-4xl font-heading text-foreground">
-              Stephen Rayner
-            </h1>
-            <p class="text-base text-muted-foreground mt-0.5">
-              Fullstack Product Engineer & CTO
+    <section class="relative container max-w-7xl mb-28 mt-16 sm:mt-20 lg:mt-28">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+        <!-- Photo Column -->
+        <div class="mb-24 lg:mb-0 sm:px-6 flex justify-center lg:block">
+          <div class="relative max-w-sm min-w-[360px] lg:max-w-none">
+            <!-- Professional Photo with cutout background -->
+            <img
+              class="absolute stephen-img -top-24"
+              src="/me.webp"
+              alt="Stephen Rayner"
+            />
+
+            <!-- Decorative Background Circle SVG -->
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="fill-primary"
+                d="M57.9,-15.9C65.9,6,57.1,36.2,35,53.7C12.8,71.1,-22.7,75.6,-44.1,60.2C-65.4,44.8,-72.5,9.5,-62.8,-14.7C-53.1,-39,-26.6,-52,-0.8,-51.7C24.9,-51.5,49.8,-37.9,57.9,-15.9Z"
+                transform="translate(78 66)"></path>
+            </svg>
+
+            <!-- Decorative Dots Pattern -->
+            <div
+              class="absolute bottom-0 left-0 -z-[1] translate-y-4 -translate-x-4"
+            >
+              <svg
+                class="max-w-[10rem] h-auto text-slate-400 dark:text-slate-700"
+                width="696"
+                height="653"
+                viewBox="0 0 696 653"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="72.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="171.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="270.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="369.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="468.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="567.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="666.5" cy="29.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="29.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="128.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="227.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="326.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="425.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="524.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="623.5" cy="128.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="72.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="171.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="270.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="369.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="468.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="567.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="666.5" cy="227.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="29.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="128.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="227.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="326.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="425.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="524.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="623.5" cy="326.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="72.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="171.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="270.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="369.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="468.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="567.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="666.5" cy="425.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="29.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="128.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="227.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="326.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="425.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="524.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="623.5" cy="524.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="72.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="171.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="270.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="369.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="468.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="567.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+                <circle cx="666.5" cy="623.5" r="29.5" fill="currentColor"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div>
+          <span
+            class="block mb-1 text-sm leading-6 font-semibold text-blue-600 dark:text-blue-400 uppercase"
+          >
+            About Me
+          </span>
+          <h1 class="font-heading text-4xl sm:text-5xl mb-2 text-foreground">
+            Stephen Rayner
+          </h1>
+          <p class="text-xl text-muted-foreground mb-8">
+            Fullstack Product Engineer & CTO
+          </p>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-muted-foreground">
+              Hi there! I'm Stephen 👋 — a hands-on Fullstack Product Engineer
+              and CTO with over 14 years of experience building scalable
+              cloud-native platforms and leading high-performing engineering
+              teams.
+            </p>
+            <p class="text-muted-foreground">
+              I specialize in <span class="font-semibold text-foreground"
+                >AWS cloud architecture, modern web technologies, and AI/ML
+                integrations</span
+              >. Passionate about driving technical innovation while maintaining
+              a strong focus on business outcomes and team development.
+            </p>
+            <p class="text-muted-foreground">
+              When I'm not coding, I'm spending time with my pack of seven
+              amazing dogs: my 3 boys (Roy, Troy, and Achilles) and my 4 girls
+              (Lucy, Java, Juno, and Human). They keep life interesting and
+              remind me of the importance of <span
+                class="font-semibold text-foreground">work-life balance</span
+              >!
             </p>
           </div>
-          <div>
-            <p class="mb-12 text-base text-muted-foreground">
-              Hi there! I'm Stephen, a product engineer with a passion for the
-              entire product development process and leading teams of engineers.
-            </p>
-            <div class="flex items-center gap-3">
-              <Button className="rounded-xl">
-                <Icon name="lucide:mail" class="mr-2 size-4" />
-                <a href="mailto:contact@gruckion.com">Talk with me</a>
-              </Button>
 
-              <Button variant="outline" className="rounded-xl">
-                <Icon name="lucide:briefcase" class="mr-2.5 size-4" />
-                <a href="https://gruckion.com" target="_blank">Gruckion</a>
-              </Button>
-            </div>
+          <div class="flex flex-col sm:flex-row items-start gap-3 mt-8">
+            <Button className="rounded-full">
+              <Icon name="lucide:mail" class="mr-2 size-4" />
+              <a href="mailto:contact@gruckion.com">Get in Touch</a>
+            </Button>
+
+            <Button variant="outline" className="rounded-full">
+              <Icon name="lucide:briefcase" class="mr-2 size-4" />
+              <a href="https://gruckion.com" target="_blank">Gruckion</a>
+            </Button>
+
+            <Button variant="outline" className="rounded-full">
+              <Icon name="github" class="mr-2 size-4" />
+              <a href="https://github.com/gruckion" target="_blank">GitHub</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -51,102 +216,33 @@ import { Icon } from "astro-icon/components";
         <div
           class="relative z-10 mx-auto max-w-4xl px-4 md:max-w-6xl md:px-12 lg:max-w-5xl lg:px-6 xl:max-w-[80rem] xl:px-6 2xl:px-0"
         >
-          <div class="grid grid-cols-4 items-center gap-4 md:gap-6">
-            {/* First Column */}
-            <div class="space-y-4 md:space-y-6">
-              <Image
-                class="h-full w-auto object-cover overflow-hidden rounded-xl"
-                src={hobbies[0].image}
-                alt={hobbies[0].alt}
-                width={800}
-                height={1226}
-                loading="eager"
-              />
-              <div class="h-52 overflow-hidden rounded-xl">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[1].image}
-                  alt={hobbies[1].alt}
-                  width={800}
-                  height={1334}
-                />
-              </div>
-            </div>
-
-            {/* Second Column */}
-            <div class="space-y-4 md:space-y-6">
-              <div class="h-48 overflow-hidden rounded-xl">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[2].image}
-                  alt={hobbies[2].alt}
-                  width={800}
-                  height={983}
-                  loading="eager"
-                />
-              </div>
-              <Image
-                class="rounded-xl"
-                src={hobbies[3].image}
-                alt={hobbies[3].alt}
-                width={800}
-                height={1108}
-                loading="eager"
-              />
-              <div class="relative h-48 overflow-hidden rounded-xl">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[4].image}
-                  alt={hobbies[4].alt}
-                  width={1260}
-                  height={750}
-                />
-              </div>
-            </div>
-
-            {/* Third Column */}
-            <div class="space-y-4 md:space-y-6">
-              <div class="h-56 overflow-hidden rounded-xl">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[5].image}
-                  alt={hobbies[5].alt}
-                  width={800}
-                  height={1334}
-                  loading="eager"
-                />
-              </div>
-              <div class="h-80 w-full overflow-hidden rounded-xl xl:h-[28rem]">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[6].image}
-                  alt={hobbies[6].alt}
-                  width={801}
-                  height={2477}
-                />
-              </div>
-            </div>
-
-            {/* Fourth Column */}
-            <div class="space-y-4 md:space-y-6">
-              <div class="overflow-hidden rounded-xl bg-white">
-                <Image
-                  src={hobbies[7].image}
-                  alt={hobbies[7].alt}
-                  width={800}
-                  height={900}
-                  loading="eager"
-                />
-              </div>
-              <div class="overflow-hidden rounded-xl bg-white">
-                <Image
-                  src={hobbies[8].image}
-                  alt={hobbies[8].alt}
-                  width={800}
-                  height={900}
-                />
-              </div>
-            </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr"
+          >
+            {
+              hobbies.map((hobby) => (
+                <div
+                  class={`overflow-hidden rounded-xl ${
+                    hobby.orientation === "portrait"
+                      ? "sm:col-span-2 lg:col-span-1 lg:row-span-2"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    class={`w-full object-cover ${
+                      hobby.orientation === "portrait"
+                        ? "h-full min-h-[20rem] sm:min-h-[25rem] lg:min-h-[33rem]"
+                        : "h-64 lg:h-72"
+                    }`}
+                    src={hobby.image}
+                    alt={hobby.alt}
+                    width={hobby.orientation === "portrait" ? 600 : 800}
+                    height={hobby.orientation === "portrait" ? 800 : 600}
+                    loading="eager"
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
