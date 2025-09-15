@@ -159,7 +159,7 @@ export const aboutMe = {
   content: `I'm a hands-on Fullstack Product Engineer and CTO with over 14 years of experience in software development and technology leadership. 
   I specialize in building scalable cloud-native platforms, implementing AI/ML solutions, and leading high-performing engineering teams.
   
-  My expertise spans AWS cloud architecture, modern web technologies (React, Node.js, TypeScript), and emerging technologies like AI integrations with OpenAI and Claude. I'm passionate about driving technical innovation while maintaining a strong focus on business outcomes and team development.`,
+  My expertise spans AWS cloud architecture, modern web technologies (React, Node.js, TypeScript), and emerging technologies like local-first (TanstackDB / ElectricSQL) AI integrations (Vercel AI SDK, OpenAI and Claude). I'm passionate about driving technical innovation while maintaining a strong focus on business outcomes and team development.`,
   highlights: [
     { label: "Years of Experience", value: "14+" },
     { label: "Years as CTO/Lead", value: "7+" },
