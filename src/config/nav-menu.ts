@@ -23,12 +23,13 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Read my latest articles and thoughts.",
           image: "/images/examples/static-blog.jpg",
         },
-        {
-          title: "Newsletter",
-          href: "/newsletter",
-          description: "Subscribe to stay updated with my latest content.",
-          image: "/images/examples/newsletter.jpg",
-        },
+        // Newsletter disabled for now
+        // {
+        //   title: "Newsletter",
+        //   href: "/newsletter",
+        //   description: "Subscribe to stay updated with my latest content.",
+        //   image: "/images/examples/newsletter.jpg",
+        // },
       ],
     },
   ],
