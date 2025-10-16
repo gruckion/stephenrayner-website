@@ -23,6 +23,12 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Read my latest articles and thoughts.",
           image: "/images/examples/static-blog.jpg",
         },
+        {
+          title: "Stack",
+          href: "/stack",
+          description: "Choose the right tech stack for your next product.",
+          image: "/images/examples/stack.jpg",
+        },
         // Newsletter disabled for now
         // {
         //   title: "Newsletter",

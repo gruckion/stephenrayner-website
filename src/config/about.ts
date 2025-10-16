@@ -1,37 +1,45 @@
+import type { ImageMetadata } from 'astro';
+import royImage from '@/assets/roy.webp';
+import kikiImage from '@/assets/kiki.webp';
+import troyImage from '@/assets/troy.webp';
+import junoImage from '@/assets/juno.webp';
+import javaImage from '@/assets/java.webp';
+import myGirlsImage from '@/assets/my_girls.webp';
+
 interface HobbiesProps {
-  image: string;
+  image: ImageMetadata;
   alt: string;
   orientation: "portrait" | "landscape";
 }
 
 export const hobbies: HobbiesProps[] = [
   {
-    image: "/roy.jpg",
+    image: royImage,
     alt: "Roy the dog",
     orientation: "landscape",
   },
   {
-    image: "/kiki.jpg",
+    image: kikiImage,
     alt: "Kiki the dog - Achilles",
     orientation: "portrait",
   },
   {
-    image: "/troy.jpg",
+    image: troyImage,
     alt: "Troy the dog",
     orientation: "landscape",
   },
   {
-    image: "/juno.jpg",
+    image: junoImage,
     alt: "Juno the dog",
     orientation: "portrait",
   },
   {
-    image: "/java.jpg",
+    image: javaImage,
     alt: "Java the dog",
     orientation: "landscape",
   },
   {
-    image: "/my_girls.jpg",
+    image: myGirlsImage,
     alt: "My girls - Lucy, Java, Juno, and Human",
     orientation: "landscape",
   },

@@ -20,6 +20,7 @@ export const footerLinks: SidebarNavItem[] = [
       { title: "Home", href: "/" },
       { title: "About", href: "/about" },
       { title: "Blog", href: "/blog" },
+      { title: "Stack", href: "/stack" },
       // { title: "Newsletter", href: "/newsletter" }, // Newsletter disabled for now
     ],
   },

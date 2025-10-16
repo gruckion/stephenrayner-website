@@ -4,6 +4,8 @@ import { Image } from "astro:assets";
 import { hobbies } from "@/config/about.ts";
 import { Button } from "@/components/ui/button";
 import { Icon } from "astro-icon/components";
+import profileImage from "@/assets/me.webp";
+import { HobbiesGallery } from "@/components/ui/hobbies-gallery";
 ---
 
 <style>
@@ -20,10 +22,14 @@ import { Icon } from "astro-icon/components";
         <div class="mb-24 lg:mb-0 sm:px-6 flex justify-center lg:block">
           <div class="relative max-w-sm min-w-[360px] lg:max-w-none">
             <!-- Professional Photo with cutout background -->
-            <img
+            <Image
               class="absolute stephen-img -top-24"
-              src="/me.png"
+              src={profileImage}
               alt="Stephen Rayner"
+              width={800}
+              height={800}
+              loading="eager"
+              quality={80}
             />
 
             <!-- Decorative Background Circle SVG -->
@@ -210,42 +216,7 @@ import { Icon } from "astro-icon/components";
     <div
       class="relative z-10 flex flex-col justify-center overflow-hidden lg:overflow-visible pb-16"
     >
-      <div
-        class="mx-auto flex w-max -translate-x-[15%] justify-center lg:w-full lg:translate-x-0"
-      >
-        <div
-          class="relative z-10 mx-auto max-w-4xl px-4 md:max-w-6xl md:px-12 lg:max-w-5xl lg:px-6 xl:max-w-[80rem] xl:px-6 2xl:px-0"
-        >
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr"
-          >
-            {
-              hobbies.map((hobby) => (
-                <div
-                  class={`overflow-hidden rounded-xl ${
-                    hobby.orientation === "portrait"
-                      ? "sm:col-span-2 lg:col-span-1 lg:row-span-2"
-                      : ""
-                  }`}
-                >
-                  <Image
-                    class={`w-full object-cover ${
-                      hobby.orientation === "portrait"
-                        ? "h-full min-h-[20rem] sm:min-h-[25rem] lg:min-h-[33rem]"
-                        : "h-64 lg:h-72"
-                    }`}
-                    src={hobby.image}
-                    alt={hobby.alt}
-                    width={hobby.orientation === "portrait" ? 600 : 800}
-                    height={hobby.orientation === "portrait" ? 800 : 600}
-                    loading="eager"
-                  />
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
+      <HobbiesGallery hobbies={hobbies} client:load />
     </div>
   </section>
 </MainLayout>

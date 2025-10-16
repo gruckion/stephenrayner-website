@@ -1,0 +1,88 @@
+---
+import MainLayout from "@/layouts/main-layout.astro";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+
+const title = "Stack - Tech Stack Decision Tool";
+const description =
+  "Choose the right technology stack for your next product with our comprehensive decision tool.";
+---
+
+<MainLayout title={title} description={description}>
+  <div class="container mx-auto px-4 py-16">
+    <div class="mx-auto max-w-4xl">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+          Tech Stack Decision Tool
+        </h1>
+        <p class="text-xl text-muted-foreground">
+          Choose the perfect technology stack for your next product
+        </p>
+      </div>
+
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle>Coming Soon</CardTitle>
+          <CardDescription>
+            We're building an intelligent tool to help you make informed
+            decisions about your tech stack. Whether you're starting a new
+            project or evaluating your current technology choices, our tool will
+            guide you through the process.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Frontend Frameworks</CardTitle>
+            <CardDescription>
+              Compare React, Vue, Angular, Svelte, and more based on your
+              project requirements
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Backend Technologies</CardTitle>
+            <CardDescription>
+              Evaluate Node.js, Python, Go, Rust, and other server-side
+              solutions
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Database Solutions</CardTitle>
+            <CardDescription>
+              Choose between SQL and NoSQL options based on your data needs
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Cloud Providers</CardTitle>
+            <CardDescription>
+              Compare AWS, Azure, Google Cloud, and other hosting options
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-muted-foreground mb-4">
+          Get notified when the tool launches
+        </p>
+        <Button size="lg" disabled> Coming Soon </Button>
+      </div>
+    </div>
+  </div>
+</MainLayout>

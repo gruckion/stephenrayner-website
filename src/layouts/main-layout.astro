@@ -48,22 +48,6 @@ const { title, description, mainClass } = Astro.props;
       >
         <Icon name="github" class="size-[22px]" />
       </a>
-      <a
-        href={siteConfig.links.twitter}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="X (Twitter)"
-      >
-        <Icon name="twitter" class="size-[22px]" />
-      </a>
-      <a
-        href={siteConfig.links.linkedin}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="LinkedIn"
-      >
-        <Icon name="mdi:linkedin" class="size-[22px]" />
-      </a>
       <ThemeToggle client:load />
     </div>
   </Header>
